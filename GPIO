@@ -1,0 +1,32 @@
+//code written by me
+#include <stdio.h>
+#include <stdint.h>
+
+int main()
+{
+    uint8_t GPIO = 0;   // register (all pins OFF)
+
+    GPIO |= (1 << 1);   // turn ON pin 1
+    printf("GPIO value: %u\n", GPIO);
+    GPIO |= (1 << 4);  // turn ON pin 4
+
+    printf("GPIO value: %u\n", GPIO);
+
+    return 0;
+}
+
+
+// refined using chatgpt
+#include <stdio.h>
+#include <stdint.h>
+
+int main()
+{
+    uint8_t GPIO = 0;
+
+    GPIO |= (1 << 1) | (1 << 4);
+
+    printf("GPIO value: %u\n", GPIO);
+
+    return 0;
+}
